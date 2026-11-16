@@ -1,0 +1,1264 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AVAYA Engineering Consultancy | Bidur-6, Nuwakot, Nepal</title>
+  <meta name="description" content="AVAYA Engineering Consultancy in Bidur-6, Nuwakot, Nepal. NEC Affiliated engineers offering Municipal Building Drawing (Naksa Pass), Certified Property Valuation, and Construction Supervision." />
+
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Plus Jakarta Sans', 'sans-serif'],
+          },
+          colors: {
+            navy: {
+              950: '#071326',
+              900: '#0B1E3D',
+              800: '#163663',
+              700: '#1E4673',
+            },
+            crimson: {
+              600: '#D62828',
+              700: '#B91C1C',
+            },
+            blueprint: {
+              50: '#F5F7FA',
+              100: '#E8EDF5',
+              200: '#D3DCE8',
+            }
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    /* Architectural CAD Grid Backgrounds */
+    .cad-grid-dark {
+      background-color: #0B1E3D;
+      background-image:
+        linear-gradient(to right, rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+        linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+      background-size: 80px 80px, 80px 80px, 20px 20px, 20px 20px;
+    }
+
+    .cad-grid-light {
+      background-color: #F5F7FA;
+      background-image:
+        linear-gradient(to right, rgba(11, 30, 61, 0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(11, 30, 61, 0.04) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+
+    /* Section Scroll Offset for Sticky Navbar */
+    section[id], div[id="credentials"] {
+      scroll-margin-top: 84px;
+    }
+
+    /* Subtle Scroll Reveal Animation */
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Highlight Pulse when Service is Pre-selected */
+    @keyframes selectHighlight {
+      0% { box-shadow: 0 0 0 0 rgba(214, 40, 40, 0.45); border-color: #D62828; }
+      70% { box-shadow: 0 0 0 8px rgba(214, 40, 40, 0); border-color: #D62828; }
+      100% { box-shadow: 0 0 0 0 rgba(214, 40, 40, 0); }
+    }
+
+    .highlight-pulse {
+      animation: selectHighlight 1.2s ease-out;
+    }
+  </style>
+</head>
+<body class="bg-white text-[#0F172A] font-sans antialiased overflow-x-hidden selection:bg-crimson-600 selection:text-white">
+
+  <!-- Toast Notification Container (Replaces alert) -->
+  <div id="toast-notification" role="status" aria-live="polite" class="fixed bottom-5 right-5 z-50 pointer-events-none opacity-0 translate-y-3 transition-all duration-300">
+    <div class="bg-navy-900 text-white border-l-4 border-crimson-600 px-4 py-3 rounded-lg shadow-xl flex items-center gap-3 text-sm font-medium">
+      <svg class="w-5 h-5 text-crimson-600 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+      </svg>
+      <span id="toast-message">Email copied to clipboard</span>
+    </div>
+  </div>
+
+  <!-- =========================================================
+       1. STICKY NAVIGATION BAR
+       ========================================================= -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <!-- Brand Logo Lockup -->
+        <a href="#top" class="flex items-center gap-3 group focus:outline-none rounded-lg" aria-label="AVAYA Engineering Consultancy Home">
+          <!-- Custom Inline SVG AVAYA Geometric Emblem -->
+          <svg class="w-11 h-11 sm:w-12 sm:h-12 shrink-0 transition-transform duration-300 group-hover:scale-105" viewBox="0 0 200 185" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AVAYA Logo Emblem">
+            <!-- Silver-Grey Hexagonal & Isometric Frame -->
+            <polygon points="100,24 156,56 156,120 100,152 44,120 44,56" stroke="#9AA0A8" stroke-width="8" stroke-linejoin="miter" fill="none" />
+            <!-- Inner Silver Isometric Chevrons & Struts -->
+            <polyline points="44,104 72,88 100,104 128,88 156,104" stroke="#9AA0A8" stroke-width="7.5" stroke-linecap="square" stroke-linejoin="miter" fill="none" />
+            <polyline points="62,67 100,45 138,67" stroke="#9AA0A8" stroke-width="7" stroke-linejoin="miter" fill="none" />
+            <!-- Vertical Stem to Bottom Gold Node -->
+            <line x1="100" y1="128" x2="100" y2="152" stroke="#D4A446" stroke-width="6.5" />
+            <!-- Gold Hexagon Vertex Node -->
+            <polygon points="100,150 112,157 112,171 100,178 88,171 88,157" stroke="#D4A446" stroke-width="6.5" fill="#FFFFFF" />
+            <!-- Deep Steel Navy Shaded Inner Bevels of 'A' -->
+            <polygon points="34,148 44,154 78,94 68,88" fill="#122B4A" />
+            <polygon points="166,148 156,154 122,94 132,88" fill="#122B4A" />
+            <polygon points="82,112 128,86 133,95 87,121" fill="#153356" />
+            <!-- Primary Steel Navy Blue 'A' Monogram -->
+            <path d="M100 12 L48 64 L48 92 L34 118 L44 154 L56 134 L56 112 L94 46 L100 40 L144 116 L144 136 L156 154 L166 118 L112 24 Z" fill="#1E4673" />
+            <!-- Center Facet Highlights for Isometric Depth -->
+            <polygon points="100,12 112,24 100,40 88,24" fill="#27588E" />
+            <polygon points="62,86 100,42 108,51 70,95" fill="#183A61" />
+          </svg>
+          <div class="flex flex-col">
+            <span class="font-display font-extrabold text-xl sm:text-2xl tracking-wider text-navy-900 leading-none">AVAYA</span>
+            <span class="text-[10px] sm:text-[11px] font-bold tracking-[0.16em] text-navy-700 uppercase mt-1">Engineering Consultancy</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center gap-8" aria-label="Primary Navigation">
+          <a href="#about" class="text-sm font-semibold text-slate-700 hover:text-navy-900 transition-colors py-2">About</a>
+          <a href="#services" class="text-sm font-semibold text-slate-700 hover:text-navy-900 transition-colors py-2">Services</a>
+          <a href="#process" class="text-sm font-semibold text-slate-700 hover:text-navy-900 transition-colors py-2">Process</a>
+          <a href="#credentials" class="text-sm font-semibold text-slate-700 hover:text-navy-900 transition-colors py-2">Credentials</a>
+          <a href="#contact" class="text-sm font-semibold text-slate-700 hover:text-navy-900 transition-colors py-2">Contact</a>
+        </nav>
+
+        <!-- Desktop CTA & Mobile Menu Button -->
+        <div class="flex items-center gap-3">
+          <a href="#contact" class="hidden sm:inline-flex items-center justify-center bg-crimson-600 hover:bg-crimson-700 text-white font-display font-bold text-sm px-5 py-2.5 rounded-lg shadow-sm hover:shadow transition-all">
+            Request Consultation
+          </a>
+
+          <!-- Mobile Hamburger Toggle -->
+          <button id="mobile-menu-btn" type="button" aria-expanded="false" aria-controls="mobile-menu" class="lg:hidden inline-flex items-center justify-center p-2.5 rounded-lg text-navy-900 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-navy-800" aria-label="Toggle navigation menu">
+            <svg id="menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <svg id="menu-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-slate-200 px-4 pt-3 pb-5 shadow-lg">
+      <div class="flex flex-col space-y-1">
+        <a href="#about" class="mobile-nav-link px-3 py-3 rounded-lg text-base font-semibold text-slate-800 hover:bg-blueprint-50 hover:text-navy-900">About</a>
+        <a href="#services" class="mobile-nav-link px-3 py-3 rounded-lg text-base font-semibold text-slate-800 hover:bg-blueprint-50 hover:text-navy-900">Services</a>
+        <a href="#process" class="mobile-nav-link px-3 py-3 rounded-lg text-base font-semibold text-slate-800 hover:bg-blueprint-50 hover:text-navy-900">Process</a>
+        <a href="#credentials" class="mobile-nav-link px-3 py-3 rounded-lg text-base font-semibold text-slate-800 hover:bg-blueprint-50 hover:text-navy-900">Credentials</a>
+        <a href="#contact" class="mobile-nav-link px-3 py-3 rounded-lg text-base font-semibold text-slate-800 hover:bg-blueprint-50 hover:text-navy-900">Contact</a>
+        <div class="pt-2">
+          <a href="#contact" class="mobile-nav-link w-full flex items-center justify-center bg-crimson-600 hover:bg-crimson-700 text-white font-display font-bold text-sm px-5 py-3.5 rounded-lg shadow">
+            Request Consultation
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================
+       2. HERO SECTION
+       ========================================================= -->
+  <section id="top" class="relative cad-grid-dark text-white overflow-hidden">
+    <!-- Top Crimson Accent Strip -->
+    <div class="h-1 w-full bg-gradient-to-r from-crimson-600 via-crimson-600 to-navy-800"></div>
+
+    <!-- Architectural Corner Drafting Marks -->
+    <div class="hidden md:block pointer-events-none absolute top-8 left-8 w-8 h-8 border-t-2 border-l-2 border-white/25"></div>
+    <div class="hidden md:block pointer-events-none absolute top-8 right-8 w-8 h-8 border-t-2 border-r-2 border-white/25"></div>
+    <div class="hidden md:block pointer-events-none absolute bottom-32 left-8 w-8 h-8 border-b-2 border-l-2 border-white/25"></div>
+    <div class="hidden md:block pointer-events-none absolute bottom-32 right-8 w-8 h-8 border-b-2 border-r-2 border-white/25"></div>
+
+    <!-- Subtle Decorative Geometric CAD Blueprint Vector on Right -->
+    <div class="pointer-events-none absolute -right-24 top-10 opacity-10 hidden lg:block">
+      <svg width="520" height="520" viewBox="0 0 200 200" fill="none">
+        <circle cx="100" cy="100" r="90" stroke="#FFFFFF" stroke-width="0.6" stroke-dasharray="3 3" />
+        <polygon points="100,15 174,58 174,142 100,185 26,142 26,58" stroke="#FFFFFF" stroke-width="0.8" />
+        <polygon points="100,32 158,66 158,134 100,168 42,134 42,66" stroke="#D62828" stroke-width="0.8" />
+        <line x1="100" y1="0" x2="100" y2="200" stroke="#FFFFFF" stroke-width="0.4" />
+        <line x1="0" y1="100" x2="200" y2="100" stroke="#FFFFFF" stroke-width="0.4" />
+      </svg>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-14 pb-16 sm:pt-20 sm:pb-24 relative z-10">
+      <div class="max-w-3xl">
+        <!-- Location & NEC Affiliation Badge -->
+        <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-navy-800/90 border border-white/15 mb-6">
+          <span class="w-2 h-2 rounded-full bg-crimson-600 animate-pulse"></span>
+          <span class="text-xs sm:text-sm font-semibold tracking-wider uppercase text-slate-200">
+            BIDUR-6, NUWAKOT, NEPAL • NEC AFFILIATED
+          </span>
+        </div>
+
+        <!-- Sharp Red Accent Bar -->
+        <div class="w-16 h-1.5 bg-crimson-600 rounded-full mb-6"></div>
+
+        <!-- Main Headline -->
+        <h1 class="font-display font-extrabold text-3xl sm:text-5xl lg:text-[54px] tracking-tight text-white leading-[1.14] mb-6">
+          Precision Engineering, Naksa Pass &amp; Certified Valuation.
+        </h1>
+
+        <!-- Subheadline -->
+        <p class="text-base sm:text-lg lg:text-xl text-slate-300 leading-relaxed max-w-2xl mb-9">
+          AVAYA Engineering Consultancy delivers compliant municipal building drawings, bank-standard property valuations, and dedicated construction supervision across Bidur and Nuwakot.
+        </p>
+
+        <!-- Action Buttons -->
+        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+          <a href="#contact" class="inline-flex items-center justify-center gap-2 bg-crimson-600 hover:bg-crimson-700 text-white font-display font-bold text-base px-7 py-4 rounded-xl shadow-lg shadow-crimson-600/20 transition-all">
+            <span>Get a Consultation</span>
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
+          <a href="#services" class="inline-flex items-center justify-center gap-2 bg-white/5 hover:bg-white/10 text-white border border-white/25 font-display font-bold text-base px-7 py-4 rounded-xl transition-all">
+            <span>Explore Services</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Integrated Bottom Credential Bar -->
+    <div class="border-t border-white/10 bg-navy-950/75 backdrop-blur-sm">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Credential 1 -->
+          <div class="flex items-start gap-3.5">
+            <div class="w-10 h-10 rounded-lg bg-navy-800 border border-white/15 flex items-center justify-center shrink-0 text-crimson-600">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+            </div>
+            <div>
+              <h2 class="font-display font-bold text-sm sm:text-base text-white">NEC Affiliated</h2>
+              <p class="text-xs sm:text-sm text-slate-400 mt-0.5">Nepal Engineering Council Registered Engineers</p>
+            </div>
+          </div>
+
+          <!-- Credential 2 -->
+          <div class="flex items-start gap-3.5">
+            <div class="w-10 h-10 rounded-lg bg-navy-800 border border-white/15 flex items-center justify-center shrink-0 text-crimson-600">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+              </svg>
+            </div>
+            <div>
+              <h2 class="font-display font-bold text-sm sm:text-base text-white">Municipal Licensed</h2>
+              <p class="text-xs sm:text-sm text-slate-400 mt-0.5">Authorized for Building Permits &amp; Naksa Pass</p>
+            </div>
+          </div>
+
+          <!-- Credential 3 -->
+          <div class="flex items-start gap-3.5">
+            <div class="w-10 h-10 rounded-lg bg-navy-800 border border-white/15 flex items-center justify-center shrink-0 text-crimson-600">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+            </div>
+            <div>
+              <h2 class="font-display font-bold text-sm sm:text-base text-white">Bank Valuation</h2>
+              <p class="text-xs sm:text-sm text-slate-400 mt-0.5">Certified Property &amp; Collateral Valuation Reports</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       3. ABOUT & ACCREDITATIONS SECTION
+       ========================================================= -->
+  <section id="about" class="py-16 sm:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- 2-Column Architectural Overview -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center reveal">
+        <!-- Left Content Column -->
+        <div class="lg:col-span-7">
+          <div class="inline-flex items-center gap-2 text-crimson-600 font-display font-bold text-xs uppercase tracking-[0.18em] mb-3">
+            <span class="w-6 h-0.5 bg-crimson-600"></span>
+            <span>About AVAYA Engineering</span>
+          </div>
+          <h2 class="font-display font-extrabold text-2xl sm:text-4xl text-navy-900 tracking-tight leading-tight mb-5">
+            Trusted Civil &amp; Structural Engineering Partner in Nuwakot
+          </h2>
+          <p class="text-slate-600 text-base sm:text-lg leading-relaxed mb-4">
+            Based in <strong class="text-navy-900 font-semibold">Bidur-6, Nuwakot</strong>, AVAYA Engineering Consultancy provides end-to-end technical solutions for homeowners, commercial developers, and financial institutions. We bridge rigorous structural engineering with smooth municipal compliance.
+          </p>
+          <p class="text-slate-600 text-base leading-relaxed mb-7">
+            Every drawing, structural analysis, and valuation report is prepared under strict adherence to the <strong class="text-navy-900 font-semibold">Nepal National Building Code (NBC)</strong>—ensuring seismic resilience, transparent Naksa Pass approvals, and reliable property assessments.
+          </p>
+
+          <!-- Key Pillars Checklist -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2 border-t border-slate-200">
+            <div class="flex items-center gap-3 pt-3">
+              <span class="w-6 h-6 rounded-md bg-navy-900 text-white flex items-center justify-center shrink-0">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+              </span>
+              <span class="text-sm font-semibold text-navy-900">NBC Seismic Safety Compliance</span>
+            </div>
+            <div class="flex items-center gap-3 pt-3">
+              <span class="w-6 h-6 rounded-md bg-navy-900 text-white flex items-center justify-center shrink-0">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+              </span>
+              <span class="text-sm font-semibold text-navy-900">Transparent Naksa Pass Process</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="w-6 h-6 rounded-md bg-navy-900 text-white flex items-center justify-center shrink-0">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+              </span>
+              <span class="text-sm font-semibold text-navy-900">Accurate Cadastral &amp; Asset Valuation</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="w-6 h-6 rounded-md bg-navy-900 text-white flex items-center justify-center shrink-0">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+              </span>
+              <span class="text-sm font-semibold text-navy-900">Dedicated Field Quality Control</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Architectural Spec Card -->
+        <div class="lg:col-span-5">
+          <div class="relative rounded-2xl cad-grid-light border border-slate-200 p-6 sm:p-8 shadow-sm">
+            <!-- Corner CAD Brackets -->
+            <div class="absolute top-3 left-3 w-4 h-4 border-t-2 border-l-2 border-navy-800/40"></div>
+            <div class="absolute top-3 right-3 w-4 h-4 border-t-2 border-r-2 border-navy-800/40"></div>
+            <div class="absolute bottom-3 left-3 w-4 h-4 border-b-2 border-l-2 border-navy-800/40"></div>
+            <div class="absolute bottom-3 right-3 w-4 h-4 border-b-2 border-r-2 border-navy-800/40"></div>
+
+            <div class="bg-navy-900 text-white rounded-xl p-6 shadow-md">
+              <div class="flex items-center justify-between border-b border-white/15 pb-4 mb-5">
+                <div>
+                  <span class="text-[11px] uppercase tracking-widest text-slate-400 block">Practice Profile</span>
+                  <span class="font-display font-bold text-lg text-white">Engineering Standards</span>
+                </div>
+                <span class="px-2.5 py-1 rounded bg-crimson-600 text-white text-xs font-bold tracking-wider">NBC READY</span>
+              </div>
+
+              <dl class="space-y-4 text-sm">
+                <div class="flex justify-between items-start gap-4 border-b border-white/10 pb-3">
+                  <dt class="text-slate-400">Primary Office</dt>
+                  <dd class="font-semibold text-right text-white">Bidur-6, Nuwakot, Nepal</dd>
+                </div>
+                <div class="flex justify-between items-start gap-4 border-b border-white/10 pb-3">
+                  <dt class="text-slate-400">Regulatory Body</dt>
+                  <dd class="font-semibold text-right text-white">Nepal Engineering Council (NEC)</dd>
+                </div>
+                <div class="flex justify-between items-start gap-4 border-b border-white/10 pb-3">
+                  <dt class="text-slate-400">Municipal Scope</dt>
+                  <dd class="font-semibold text-right text-white">Bidur Municipality &amp; Nuwakot District</dd>
+                </div>
+                <div class="flex justify-between items-start gap-4">
+                  <dt class="text-slate-400">Valuation Standard</dt>
+                  <dd class="font-semibold text-right text-white">Commercial Bank &amp; Financial Norms</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 Official Credential Cards -->
+      <div id="credentials" class="mt-16 sm:mt-20 pt-12 border-t border-slate-200 reveal">
+        <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-8 gap-4">
+          <div>
+            <span class="text-xs font-display font-bold uppercase tracking-[0.18em] text-crimson-600 block mb-2">Verified Qualifications</span>
+            <h3 class="font-display font-extrabold text-xl sm:text-2xl text-navy-900">Official Accreditations &amp; Licensing</h3>
+          </div>
+          <p class="text-sm text-slate-500 max-w-md">Authorized to certify architectural drawings, structural designs, and collateral valuations.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Credential Card 1 -->
+          <div class="bg-blueprint-50 border border-slate-200/90 rounded-xl p-6 relative overflow-hidden group hover:border-navy-800 transition-colors">
+            <div class="absolute top-0 left-0 w-1.5 h-full bg-navy-900 group-hover:bg-crimson-600 transition-colors"></div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-2.5 py-1 rounded bg-navy-900/10 text-navy-900 font-display font-bold text-xs tracking-wider uppercase">Credential 01</span>
+              <svg class="w-6 h-6 text-navy-800" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+            </div>
+            <h4 class="font-display font-bold text-lg text-navy-900 mb-2">NEC Affiliation</h4>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Led by engineers duly registered with the <strong class="text-navy-900">Nepal Engineering Council (NEC)</strong>, guaranteeing professional accountability, ethical practice, and certified engineering sign-off.
+            </p>
+          </div>
+
+          <!-- Credential Card 2 -->
+          <div class="bg-blueprint-50 border border-slate-200/90 rounded-xl p-6 relative overflow-hidden group hover:border-navy-800 transition-colors">
+            <div class="absolute top-0 left-0 w-1.5 h-full bg-navy-900 group-hover:bg-crimson-600 transition-colors"></div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-2.5 py-1 rounded bg-navy-900/10 text-navy-900 font-display font-bold text-xs tracking-wider uppercase">Credential 02</span>
+              <svg class="w-6 h-6 text-navy-800" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z" />
+              </svg>
+            </div>
+            <h4 class="font-display font-bold text-lg text-navy-900 mb-2">Municipal Licensing</h4>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Officially licensed to prepare, submit, and certify architectural and structural building permit drawings (<strong class="text-navy-900">Naksa Pass</strong>) in accordance with local municipal bylaws.
+            </p>
+          </div>
+
+          <!-- Credential Card 3 -->
+          <div class="bg-blueprint-50 border border-slate-200/90 rounded-xl p-6 relative overflow-hidden group hover:border-navy-800 transition-colors">
+            <div class="absolute top-0 left-0 w-1.5 h-full bg-navy-900 group-hover:bg-crimson-600 transition-colors"></div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-2.5 py-1 rounded bg-navy-900/10 text-navy-900 font-display font-bold text-xs tracking-wider uppercase">Credential 03</span>
+              <svg class="w-6 h-6 text-navy-800" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+            </div>
+            <h4 class="font-display font-bold text-lg text-navy-900 mb-2">Bank Valuation Standards</h4>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Qualified to conduct technical site verification, cadastral measurement, and fair market &amp; distress valuation reports accepted by commercial banks and financial institutions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       4. CORE ENGINEERING SERVICES SECTION
+       ========================================================= -->
+  <section id="services" class="py-16 sm:py-24 cad-grid-light border-y border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Section Header -->
+      <div class="max-w-3xl mx-auto text-center mb-14 reveal">
+        <div class="inline-flex items-center justify-center gap-2 text-crimson-600 font-display font-bold text-xs uppercase tracking-[0.18em] mb-3">
+          <span class="w-6 h-0.5 bg-crimson-600"></span>
+          <span>Core Engineering Services</span>
+          <span class="w-6 h-0.5 bg-crimson-600"></span>
+        </div>
+        <h2 class="font-display font-extrabold text-2xl sm:text-4xl text-navy-900 tracking-tight mb-4">
+          Comprehensive Engineering &amp; Advisory Solutions
+        </h2>
+        <p class="text-slate-600 text-base sm:text-lg">
+          Focused technical expertise tailored for residential, commercial, and institutional projects in Bidur and across Nuwakot.
+        </p>
+      </div>
+
+      <!-- 3-Column Service Cards -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 reveal">
+
+        <!-- Service 01: Municipal Building Drawing / Naksa Pass -->
+        <article class="bg-white rounded-2xl border border-slate-200 border-t-4 border-t-navy-900 hover:border-t-crimson-600 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between p-7 sm:p-8 group">
+          <div>
+            <!-- Header Row: Number & Engineering SVG Icon -->
+            <div class="flex items-center justify-between mb-6">
+              <span class="font-display font-extrabold text-3xl text-slate-200 group-hover:text-crimson-600/25 transition-colors">01</span>
+              <div class="w-12 h-12 rounded-xl bg-navy-900 text-white group-hover:bg-crimson-600 transition-colors flex items-center justify-center shadow-sm">
+                <!-- Blueprint Drafting Compass / Plan SVG -->
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+              </div>
+            </div>
+
+            <h3 class="font-display font-bold text-xl text-navy-900 mb-3">
+              Municipal Building Drawing / Naksa Pass
+            </h3>
+            <p class="text-sm text-slate-600 leading-relaxed mb-6">
+              Complete architectural and structural drafting packages engineered for hassle-free municipal building permit approval.
+            </p>
+
+            <!-- Deliverables List -->
+            <ul class="space-y-3 text-sm text-slate-700 mb-8">
+              <li class="flex items-start gap-2.5">
+                <svg class="w-4 h-4 text-crimson-600 shrink-0 mt-1" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Architectural floor plans, elevations &amp; cross-sections</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <svg class="w-4 h-4 text-crimson-600 shrink-0 mt-1" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>NBC-compliant seismic &amp; structural design</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <svg class="w-4 h-4 text-crimson-600 shrink-0 mt-1" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Municipal building permit (Naksa Pass) documentation and approval coordination</span>
+              </li>
+            </ul>
+          </div>
+
+          <button type="button" data-service="Municipal Building Drawing / Naksa Pass" class="service-select-btn w-full inline-flex items-center justify-between px-4 py-3 rounded-xl bg-blueprint-50 hover:bg-navy-900 text-navy-900 hover:text-white font-display font-bold text-sm transition-colors group/btn">
+            <span>Consult on This Service</span>
+            <svg class="w-4 h-4 transition-transform group-hover/btn:translate-x-1" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </button>
+        </article>
+
+        <!-- Service 02: Property Valuation -->
+        <article class="bg-white rounded-2xl border border-slate-200 border-t-4 border-t-navy-900 hover:border-t-crimson-600 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between p-7 sm:p-8 group">
+          <div>
+            <!-- Header Row: Number & Engineering SVG Icon -->
+            <div class="flex items-center justify-between mb-6">
+              <span class="font-display font-extrabold text-3xl text-slate-200 group-hover:text-crimson-600/25 transition-colors">02</span>
+              <div class="w-12 h-12 rounded-xl bg-navy-900 text-white group-hover:bg-crimson-600 transition-colors flex items-center justify-center shadow-sm">
+                <!-- Property & Asset Assessment SVG -->
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                </svg>
+              </div>
+            </div>
+
+            <h3 class="font-display font-bold text-xl text-navy-900 mb-3">
+              Property Valuation
+            </h3>
+            <p class="text-sm text-slate-600 leading-relaxed mb-6">
+              Objective, thoroughly documented real estate and infrastructure valuation reports for banking, lending, and asset audit needs.
+            </p>
+
+            <!-- Deliverables List -->
+            <ul class="space-y-3 text-sm text-slate-700 mb-8">
+              <li class="flex items-start gap-2.5">
+                <svg class="w-4 h-4 text-crimson-600 shrink-0 mt-1" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Land, residential &amp; commercial building valuation for banks and financial institutions</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <svg class="w-4 h-4 text-crimson-600 shrink-0 mt-1" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Fair market &amp; distress value assessment</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <svg class="w-4 h-4 text-crimson-600 shrink-0 mt-1" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Detailed technical valuation reports with site &amp; cadastral verification</span>
+              </li>
+            </ul>
+          </div>
+
+          <button type="button" data-service="Property Valuation" class="service-select-btn w-full inline-flex items-center justify-between px-4 py-3 rounded-xl bg-blueprint-50 hover:bg-navy-900 text-navy-900 hover:text-white font-display font-bold text-sm transition-colors group/btn">
+            <span>Consult on This Service</span>
+            <svg class="w-4 h-4 transition-transform group-hover/btn:translate-x-1" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </button>
+        </article>
+
+        <!-- Service 03: Construction Supervision -->
+        <article class="bg-white rounded-2xl border border-slate-200 border-t-4 border-t-navy-900 hover:border-t-crimson-600 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between p-7 sm:p-8 group">
+          <div>
+            <!-- Header Row: Number & Engineering SVG Icon -->
+            <div class="flex items-center justify-between mb-6">
+              <span class="font-display font-extrabold text-3xl text-slate-200 group-hover:text-crimson-600/25 transition-colors">03</span>
+              <div class="w-12 h-12 rounded-xl bg-navy-900 text-white group-hover:bg-crimson-600 transition-colors flex items-center justify-center shadow-sm">
+                <!-- Site Inspection / Quality Verification SVG -->
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+                </svg>
+              </div>
+            </div>
+
+            <h3 class="font-display font-bold text-xl text-navy-900 mb-3">
+              Construction Supervision
+            </h3>
+            <p class="text-sm text-slate-600 leading-relaxed mb-6">
+              Hands-on field oversight ensuring your building is executed safely, accurately, and strictly according to structural specifications.
+            </p>
+
+            <!-- Deliverables List -->
+            <ul class="space-y-3 text-sm text-slate-700 mb-8">
+              <li class="flex items-start gap-2.5">
+                <svg class="w-4 h-4 text-crimson-600 shrink-0 mt-1" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Regular on-site engineering supervision</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <svg class="w-4 h-4 text-crimson-600 shrink-0 mt-1" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Rebar, concrete quality &amp; structural safety verification</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <svg class="w-4 h-4 text-crimson-600 shrink-0 mt-1" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Stage-wise compliance checks against approved municipal drawings</span>
+              </li>
+            </ul>
+          </div>
+
+          <button type="button" data-service="Construction Supervision" class="service-select-btn w-full inline-flex items-center justify-between px-4 py-3 rounded-xl bg-blueprint-50 hover:bg-navy-900 text-navy-900 hover:text-white font-display font-bold text-sm transition-colors group/btn">
+            <span>Consult on This Service</span>
+            <svg class="w-4 h-4 transition-transform group-hover/btn:translate-x-1" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </button>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       5. STREAMLINED WORK PROCESS SECTION
+       ========================================================= -->
+  <section id="process" class="py-16 sm:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center mb-14 reveal">
+        <div class="inline-flex items-center justify-center gap-2 text-crimson-600 font-display font-bold text-xs uppercase tracking-[0.18em] mb-3">
+          <span class="w-6 h-0.5 bg-crimson-600"></span>
+          <span>How We Work</span>
+          <span class="w-6 h-0.5 bg-crimson-600"></span>
+        </div>
+        <h2 class="font-display font-extrabold text-2xl sm:text-4xl text-navy-900 tracking-tight mb-4">
+          Streamlined Engineering Workflow
+        </h2>
+        <p class="text-slate-600 text-base sm:text-lg">
+          A transparent, four-stage delivery methodology from initial field measurement to certified handover.
+        </p>
+      </div>
+
+      <!-- 4-Step Horizontal Process Grid -->
+      <div class="relative reveal">
+        <!-- Connecting Horizontal Line (Desktop) -->
+        <div class="hidden lg:block absolute top-9 left-[12%] right-[12%] h-0.5 bg-slate-200 z-0"></div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 relative z-10">
+          <!-- Step 01 -->
+          <div class="bg-blueprint-50 lg:bg-transparent border border-slate-200 lg:border-0 rounded-xl p-6 lg:p-0 text-left lg:text-center">
+            <div class="inline-flex items-center justify-center w-18 h-18 px-4 py-3 rounded-xl bg-navy-900 text-white font-display font-extrabold text-sm tracking-wider shadow-md border-b-4 border-crimson-600 mb-5">
+              STEP 01
+            </div>
+            <h3 class="font-display font-bold text-lg text-navy-900 mb-2">
+              Site Visit &amp; Requirement Review
+            </h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              On-site inspection, land boundary verification, soil/topography assessment, and client scope alignment.
+            </p>
+          </div>
+
+          <!-- Step 02 -->
+          <div class="bg-blueprint-50 lg:bg-transparent border border-slate-200 lg:border-0 rounded-xl p-6 lg:p-0 text-left lg:text-center">
+            <div class="inline-flex items-center justify-center w-18 h-18 px-4 py-3 rounded-xl bg-navy-900 text-white font-display font-extrabold text-sm tracking-wider shadow-md border-b-4 border-crimson-600 mb-5">
+              STEP 02
+            </div>
+            <h3 class="font-display font-bold text-lg text-navy-900 mb-2">
+              Technical Drafting &amp; Assessment
+            </h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              CAD architectural drafting, structural load calculations, or detailed property market &amp; cadastral valuation analysis.
+            </p>
+          </div>
+
+          <!-- Step 03 -->
+          <div class="bg-blueprint-50 lg:bg-transparent border border-slate-200 lg:border-0 rounded-xl p-6 lg:p-0 text-left lg:text-center">
+            <div class="inline-flex items-center justify-center w-18 h-18 px-4 py-3 rounded-xl bg-navy-900 text-white font-display font-extrabold text-sm tracking-wider shadow-md border-b-4 border-crimson-600 mb-5">
+              STEP 03
+            </div>
+            <h3 class="font-display font-bold text-lg text-navy-900 mb-2">
+              NEC &amp; Regulatory Verification
+            </h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Quality audit against Nepal National Building Code (NBC), municipal bylaws, and NEC engineer certification.
+            </p>
+          </div>
+
+          <!-- Step 04 -->
+          <div class="bg-blueprint-50 lg:bg-transparent border border-slate-200 lg:border-0 rounded-xl p-6 lg:p-0 text-left lg:text-center">
+            <div class="inline-flex items-center justify-center w-18 h-18 px-4 py-3 rounded-xl bg-navy-900 text-white font-display font-extrabold text-sm tracking-wider shadow-md border-b-4 border-crimson-600 mb-5">
+              STEP 04
+            </div>
+            <h3 class="font-display font-bold text-lg text-navy-900 mb-2">
+              Certified Handover &amp; Supervision
+            </h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Delivery of approved Naksa Pass documents or bank valuation reports, followed by scheduled site supervision.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       6. CONTACT & CONSULTATION SECTION
+       ========================================================= -->
+  <section id="contact" class="py-16 sm:py-24 cad-grid-light border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center mb-12 reveal">
+        <div class="inline-flex items-center justify-center gap-2 text-crimson-600 font-display font-bold text-xs uppercase tracking-[0.18em] mb-3">
+          <span class="w-6 h-0.5 bg-crimson-600"></span>
+          <span>Get In Touch</span>
+          <span class="w-6 h-0.5 bg-crimson-600"></span>
+        </div>
+        <h2 class="font-display font-extrabold text-2xl sm:text-4xl text-navy-900 tracking-tight mb-3">
+          Schedule an Engineering Consultation
+        </h2>
+        <p class="text-slate-600 text-base sm:text-lg">
+          Reach out for Naksa Pass drawings, property valuation inquiries, or site supervision in Bidur and Nuwakot.
+        </p>
+      </div>
+
+      <!-- Split Architectural Card -->
+      <div class="bg-white rounded-2xl shadow-xl border border-slate-200 overflow-hidden grid grid-cols-1 lg:grid-cols-12 reveal">
+
+        <!-- Left Info Panel (Deep Navy) -->
+        <div class="lg:col-span-5 bg-navy-900 text-white p-7 sm:p-10 flex flex-col justify-between relative overflow-hidden">
+          <!-- Subtle Top Crimson Accent -->
+          <div class="absolute top-0 left-0 right-0 h-1.5 bg-crimson-600"></div>
+
+          <div>
+            <span class="inline-block text-xs font-display font-bold uppercase tracking-widest text-crimson-600 bg-white/10 px-3 py-1 rounded mb-4">
+              Office &amp; Direct Contact
+            </span>
+            <h3 class="font-display font-extrabold text-2xl text-white mb-2">
+              AVAYA Engineering Consultancy
+            </h3>
+            <p class="text-slate-300 text-sm leading-relaxed mb-8">
+              Visit our office in Bidur or send us your project requirements online for a prompt engineering response.
+            </p>
+
+            <!-- Contact Details List -->
+            <div class="space-y-5 text-sm">
+              <!-- Address -->
+              <div class="flex items-start gap-3.5">
+                <div class="w-9 h-9 rounded-lg bg-navy-800 border border-white/15 flex items-center justify-center shrink-0 text-crimson-600">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <span class="text-xs uppercase tracking-wider text-slate-400 block">Office Location</span>
+                  <span class="font-semibold text-white">Bidur-6, Nuwakot, Bagmati Province, Nepal</span>
+                </div>
+              </div>
+
+              <!-- Email + Copy Button -->
+              <div class="flex items-start gap-3.5">
+                <div class="w-9 h-9 rounded-lg bg-navy-800 border border-white/15 flex items-center justify-center shrink-0 text-crimson-600">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <div class="flex-1 min-w-0">
+                  <span class="text-xs uppercase tracking-wider text-slate-400 block">Official Email</span>
+                  <div class="flex flex-wrap items-center gap-2 mt-0.5">
+                    <a href="mailto:ava.eng.cons@gmail.com" class="font-semibold text-white hover:text-crimson-600 transition-colors break-all">
+                      ava.eng.cons@gmail.com
+                    </a>
+                    <button id="copy-email-btn" type="button" class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-white/10 hover:bg-white/20 text-xs font-semibold text-slate-200 transition-colors" title="Copy email address">
+                      <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                      </svg>
+                      <span>Copy</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Working Hours -->
+              <div class="flex items-start gap-3.5">
+                <div class="w-9 h-9 rounded-lg bg-navy-800 border border-white/15 flex items-center justify-center shrink-0 text-crimson-600">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <span class="text-xs uppercase tracking-wider text-slate-400 block">Working Hours</span>
+                  <span class="font-semibold text-white">Sunday – Friday, 10:00 AM – 5:00 PM</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Embedded Clean OpenStreetMap Centered on Bidur, Nuwakot, Nepal -->
+          <div class="mt-8 pt-6 border-t border-white/15">
+            <div class="flex items-center justify-between text-xs text-slate-400 mb-2">
+              <span>Map View • Bidur, Nuwakot</span>
+              <a href="https://www.openstreetmap.org/?mlat=27.9140&mlon=85.1430#map=15/27.9140/85.1430" target="_blank" rel="noopener noreferrer" class="text-slate-300 hover:text-white underline">
+                Open Larger Map
+              </a>
+            </div>
+            <div class="rounded-xl overflow-hidden border border-white/15 h-44 bg-navy-800">
+              <iframe
+                title="Map showing Bidur-6, Nuwakot, Nepal"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=85.1250%2C27.9000%2C85.1610%2C27.9280&layer=mapnik&marker=27.9140%2C85.1430"
+                class="w-full h-full border-0"
+                loading="lazy">
+              </iframe>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Interactive Form Panel -->
+        <div class="lg:col-span-7 p-7 sm:p-10 bg-white">
+          <!-- Form Container -->
+          <div id="consultation-form-wrapper">
+            <h3 class="font-display font-bold text-xl sm:text-2xl text-navy-900 mb-2">
+              Request a Service Quote or Site Visit
+            </h3>
+            <p class="text-sm text-slate-600 mb-6">
+              Fill out your project details below. Your inquiry will be formatted immediately for direct email dispatch to our engineering desk.
+            </p>
+
+            <form id="consultation-form" novalidate class="space-y-5">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <!-- Full Name -->
+                <div>
+                  <label for="full-name" class="block text-xs font-display font-bold uppercase tracking-wider text-navy-900 mb-2">
+                    Full Name <span class="text-crimson-600">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    id="full-name"
+                    name="fullName"
+                    required
+                    placeholder="e.g., Ramesh Adhikari"
+                    class="w-full px-4 py-3 rounded-xl border border-slate-300 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-navy-800 focus:ring-2 focus:ring-navy-800/15 transition-all"
+                  />
+                </div>
+
+                <!-- Email or Phone Number -->
+                <div>
+                  <label for="contact-info" class="block text-xs font-display font-bold uppercase tracking-wider text-navy-900 mb-2">
+                    Email or Phone Number <span class="text-crimson-600">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    id="contact-info"
+                    name="contactInfo"
+                    required
+                    placeholder="e.g., 98XXXXXXXX or you@email.com"
+                    class="w-full px-4 py-3 rounded-xl border border-slate-300 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-navy-800 focus:ring-2 focus:ring-navy-800/15 transition-all"
+                  />
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <!-- Service Required Dropdown -->
+                <div>
+                  <label for="service-required" class="block text-xs font-display font-bold uppercase tracking-wider text-navy-900 mb-2">
+                    Service Required <span class="text-crimson-600">*</span>
+                  </label>
+                  <select
+                    id="service-required"
+                    name="serviceRequired"
+                    class="w-full px-4 py-3 rounded-xl border border-slate-300 bg-white text-sm text-slate-900 focus:outline-none focus:border-navy-800 focus:ring-2 focus:ring-navy-800/15 transition-all"
+                  >
+                    <option value="Municipal Building Drawing / Naksa Pass">Municipal Building Drawing / Naksa Pass</option>
+                    <option value="Property Valuation">Property Valuation</option>
+                    <option value="Construction Supervision">Construction Supervision</option>
+                    <option value="General Inquiry">General Inquiry</option>
+                  </select>
+                </div>
+
+                <!-- Site / Property Location -->
+                <div>
+                  <label for="site-location" class="block text-xs font-display font-bold uppercase tracking-wider text-navy-900 mb-2">
+                    Site / Property Location
+                  </label>
+                  <input
+                    type="text"
+                    id="site-location"
+                    name="siteLocation"
+                    placeholder="e.g., Bidur-4, Battar, Nuwakot"
+                    class="w-full px-4 py-3 rounded-xl border border-slate-300 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-navy-800 focus:ring-2 focus:ring-navy-800/15 transition-all"
+                  />
+                </div>
+              </div>
+
+              <!-- Project Details -->
+              <div>
+                <label for="project-details" class="block text-xs font-display font-bold uppercase tracking-wider text-navy-900 mb-2">
+                  Project Details <span class="text-crimson-600">*</span>
+                </label>
+                <textarea
+                  id="project-details"
+                  name="projectDetails"
+                  rows="4"
+                  required
+                  placeholder="Describe your building storeys, land area, bank valuation purpose, or supervision timeline..."
+                  class="w-full px-4 py-3 rounded-xl border border-slate-300 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-navy-800 focus:ring-2 focus:ring-navy-800/15 transition-all resize-y"
+                ></textarea>
+              </div>
+
+              <!-- Inline Validation Message -->
+              <p id="form-error-msg" class="hidden text-sm font-medium text-crimson-600 bg-red-50 border border-red-200 rounded-lg px-4 py-2.5">
+                Please fill in your Full Name, Contact Information, and Project Details before submitting.
+              </p>
+
+              <button
+                type="submit"
+                class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-crimson-600 hover:bg-crimson-700 text-white font-display font-bold text-sm sm:text-base px-8 py-3.5 rounded-xl shadow-md hover:shadow-lg transition-all"
+              >
+                <span>Prepare Consultation Inquiry</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </button>
+            </form>
+          </div>
+
+          <!-- Confirmation State (Hidden until Submit) -->
+          <div id="consultation-confirmation" class="hidden py-4">
+            <div class="rounded-2xl bg-blueprint-50 border border-slate-200 p-6 sm:p-8">
+              <div class="w-12 h-12 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center mb-4">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <h3 class="font-display font-extrabold text-xl sm:text-2xl text-navy-900 mb-2">
+                Inquiry Summary Ready
+              </h3>
+              <p class="text-sm text-slate-600 leading-relaxed mb-5">
+                Thank you, <strong id="confirm-name" class="text-navy-900"></strong>. Click the button below to open your email application pre-addressed to <strong class="text-navy-900">ava.eng.cons@gmail.com</strong> with your formatted project details.
+              </p>
+
+              <!-- Summary Box -->
+              <div class="bg-white rounded-xl border border-slate-200 p-4 text-xs sm:text-sm space-y-2 mb-6">
+                <div><span class="font-bold text-navy-900">Service:</span> <span id="confirm-service" class="text-slate-700"></span></div>
+                <div><span class="font-bold text-navy-900">Contact:</span> <span id="confirm-contact" class="text-slate-700"></span></div>
+                <div><span class="font-bold text-navy-900">Location:</span> <span id="confirm-location" class="text-slate-700"></span></div>
+                <div><span class="font-bold text-navy-900">Details:</span> <span id="confirm-details" class="text-slate-700"></span></div>
+              </div>
+
+              <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+                <a
+                  id="mailto-launch-btn"
+                  href="mailto:ava.eng.cons@gmail.com"
+                  class="inline-flex items-center justify-center gap-2 bg-crimson-600 hover:bg-crimson-700 text-white font-display font-bold text-sm px-6 py-3.5 rounded-xl shadow transition-all"
+                >
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                  <span>Send via Email App</span>
+                </a>
+                <button
+                  id="reset-form-btn"
+                  type="button"
+                  class="inline-flex items-center justify-center px-5 py-3.5 rounded-xl border border-slate-300 bg-white hover:bg-slate-50 text-navy-900 font-display font-bold text-sm transition-colors"
+                >
+                  Edit or New Inquiry
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       7. FOOTER
+       ========================================================= -->
+  <footer class="bg-navy-950 text-slate-300 border-t-4 border-crimson-600">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-10 border-b border-white/10">
+        <!-- Brand Column -->
+        <div class="md:col-span-5">
+          <a href="#top" class="inline-flex items-center gap-3 mb-4 focus:outline-none">
+            <svg class="w-11 h-11 shrink-0" viewBox="0 0 200 185" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AVAYA Logo Emblem">
+              <polygon points="100,24 156,56 156,120 100,152 44,120 44,56" stroke="#A8ADB3" stroke-width="8" stroke-linejoin="miter" fill="none" />
+              <polyline points="44,104 72,88 100,104 128,88 156,104" stroke="#A8ADB3" stroke-width="7.5" stroke-linecap="square" stroke-linejoin="miter" fill="none" />
+              <polyline points="62,67 100,45 138,67" stroke="#A8ADB3" stroke-width="7" stroke-linejoin="miter" fill="none" />
+              <line x1="100" y1="128" x2="100" y2="152" stroke="#D4A446" stroke-width="6.5" />
+              <polygon points="100,150 112,157 112,171 100,178 88,171 88,157" stroke="#D4A446" stroke-width="6.5" fill="#071326" />
+              <polygon points="34,148 44,154 78,94 68,88" fill="#153356" />
+              <polygon points="166,148 156,154 122,94 132,88" fill="#153356" />
+              <polygon points="82,112 128,86 133,95 87,121" fill="#1A3E68" />
+              <path d="M100 12 L48 64 L48 92 L34 118 L44 154 L56 134 L56 112 L94 46 L100 40 L144 116 L144 136 L156 154 L166 118 L112 24 Z" fill="#25548A" />
+              <polygon points="100,12 112,24 100,40 88,24" fill="#3269A8" />
+              <polygon points="62,86 100,42 108,51 70,95" fill="#1B3E66" />
+            </svg>
+            <div class="flex flex-col">
+              <span class="font-display font-extrabold text-xl tracking-wider text-white leading-none">AVAYA</span>
+              <span class="text-[10px] font-bold tracking-[0.16em] text-slate-400 uppercase mt-1">Engineering Consultancy</span>
+            </div>
+          </a>
+          <p class="text-sm text-slate-400 leading-relaxed max-w-sm">
+            NEC-affiliated engineering consultancy delivering Municipal Building Drawings (Naksa Pass), Bank Property Valuation, and Construction Supervision in Nuwakot.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="md:col-span-3">
+          <h4 class="font-display font-bold text-sm uppercase tracking-wider text-white mb-4">Quick Links</h4>
+          <ul class="space-y-2.5 text-sm">
+            <li><a href="#about" class="text-slate-400 hover:text-white transition-colors">About Consultancy</a></li>
+            <li><a href="#services" class="text-slate-400 hover:text-white transition-colors">Engineering Services</a></li>
+            <li><a href="#process" class="text-slate-400 hover:text-white transition-colors">Work Process</a></li>
+            <li><a href="#credentials" class="text-slate-400 hover:text-white transition-colors">Accreditations</a></li>
+            <li><a href="#contact" class="text-slate-400 hover:text-white transition-colors">Request Consultation</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Details -->
+        <div class="md:col-span-4">
+          <h4 class="font-display font-bold text-sm uppercase tracking-wider text-white mb-4">Contact Information</h4>
+          <ul class="space-y-3 text-sm text-slate-400">
+            <li class="flex items-start gap-2.5">
+              <svg class="w-4 h-4 text-crimson-600 shrink-0 mt-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+              <span>Bidur-6, Nuwakot, Nepal</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <svg class="w-4 h-4 text-crimson-600 shrink-0 mt-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              <a href="mailto:ava.eng.cons@gmail.com" class="hover:text-white transition-colors">ava.eng.cons@gmail.com</a>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <svg class="w-4 h-4 text-crimson-600 shrink-0 mt-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <span>NEC Affiliated • Municipal Licensed</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom Copyright Bar -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+        <p>&copy; <span id="current-year">2026</span> AVAYA Engineering Consultancy. All rights reserved.</p>
+        <p>Bidur-6, Nuwakot • Civil, Structural &amp; Valuation Engineering</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================
+       INTERACTIVE JAVASCRIPT
+       ========================================================= -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Set current year dynamically
+      const yearEl = document.getElementById('current-year');
+      if (yearEl) {
+        yearEl.textContent = new Date().getFullYear();
+      }
+
+      // 1. Mobile Navigation Menu Toggle
+      const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const iconOpen = document.getElementById('menu-icon-open');
+      const iconClose = document.getElementById('menu-icon-close');
+      const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+      function toggleMobileMenu(forceClose = false) {
+        const isOpen = !mobileMenu.classList.contains('hidden');
+        const shouldClose = forceClose || isOpen;
+
+        if (shouldClose) {
+          mobileMenu.classList.add('hidden');
+          iconOpen.classList.remove('hidden');
+          iconClose.classList.add('hidden');
+          mobileMenuBtn.setAttribute('aria-expanded', 'false');
+        } else {
+          mobileMenu.classList.remove('hidden');
+          iconOpen.classList.add('hidden');
+          iconClose.classList.remove('hidden');
+          mobileMenuBtn.setAttribute('aria-expanded', 'true');
+        }
+      }
+
+      if (mobileMenuBtn) {
+        mobileMenuBtn.addEventListener('click', () => toggleMobileMenu(false));
+      }
+
+      mobileNavLinks.forEach(link => {
+        link.addEventListener('click', () => toggleMobileMenu(true));
+      });
+
+      // 2. Toast Feedback Helper
+      const toastEl = document.getElementById('toast-notification');
+      const toastMsgEl = document.getElementById('toast-message');
+      let toastTimeout = null;
+
+      function showToast(message) {
+        if (!toastEl || !toastMsgEl) return;
+        toastMsgEl.textContent = message;
+        toastEl.classList.remove('opacity-0', 'translate-y-3', 'pointer-events-none');
+        toastEl.classList.add('opacity-100', 'translate-y-0');
+
+        if (toastTimeout) clearTimeout(toastTimeout);
+        toastTimeout = setTimeout(() => {
+          toastEl.classList.add('opacity-0', 'translate-y-3', 'pointer-events-none');
+          toastEl.classList.remove('opacity-100', 'translate-y-0');
+        }, 3000);
+      }
+
+      // 3. Copy Email Button (iframe-safe execCommand fallback)
+      const copyEmailBtn = document.getElementById('copy-email-btn');
+      const officeEmail = 'ava.eng.cons@gmail.com';
+
+      if (copyEmailBtn) {
+        copyEmailBtn.addEventListener('click', () => {
+          const tempInput = document.createElement('textarea');
+          tempInput.value = officeEmail;
+          tempInput.setAttribute('readonly', '');
+          tempInput.style.position = 'fixed';
+          tempInput.style.left = '-9999px';
+          document.body.appendChild(tempInput);
+          tempInput.select();
+
+          try {
+            document.execCommand('copy');
+            showToast('Email copied: ava.eng.cons@gmail.com');
+          } catch (err) {
+            showToast('Email: ava.eng.cons@gmail.com');
+          } finally {
+            document.body.removeChild(tempInput);
+          }
+        });
+      }
+
+      // 4. "Consult on This Service" Pre-selection & Smooth Scroll
+      const serviceButtons = document.querySelectorAll('.service-select-btn');
+      const serviceDropdown = document.getElementById('service-required');
+      const contactSection = document.getElementById('contact');
+      const formWrapper = document.getElementById('consultation-form-wrapper');
+      const confirmationWrapper = document.getElementById('consultation-confirmation');
+
+      serviceButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const selectedService = btn.getAttribute('data-service');
+
+          // Ensure form is visible if previously submitted
+          if (formWrapper && confirmationWrapper) {
+            confirmationWrapper.classList.add('hidden');
+            formWrapper.classList.remove('hidden');
+          }
+
+          if (serviceDropdown && selectedService) {
+            serviceDropdown.value = selectedService;
+            serviceDropdown.classList.remove('highlight-pulse');
+            void serviceDropdown.offsetWidth; // trigger reflow
+            serviceDropdown.classList.add('highlight-pulse');
+          }
+
+          if (contactSection) {
+            contactSection.scrollIntoView({ behavior: 'smooth' });
+          }
+
+          showToast(`Selected: ${selectedService}`);
+        });
+      });
+
+      // 5. Interactive Static Consultation Form Handling
+      const consultationForm = document.getElementById('consultation-form');
+      const formErrorMsg = document.getElementById('form-error-msg');
+      const mailtoLaunchBtn = document.getElementById('mailto-launch-btn');
+      const resetFormBtn = document.getElementById('reset-form-btn');
+
+      if (consultationForm) {
+        consultationForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+
+          const fullName = document.getElementById('full-name').value.trim();
+          const contactInfo = document.getElementById('contact-info').value.trim();
+          const serviceRequired = document.getElementById('service-required').value;
+          const siteLocation = document.getElementById('site-location').value.trim() || 'Not specified';
+          const projectDetails = document.getElementById('project-details').value.trim();
+
+          if (!fullName || !contactInfo || !projectDetails) {
+            formErrorMsg.classList.remove('hidden');
+            return;
+          }
+
+          formErrorMsg.classList.add('hidden');
+
+          // Populate confirmation summary
+          document.getElementById('confirm-name').textContent = fullName;
+          document.getElementById('confirm-service').textContent = serviceRequired;
+          document.getElementById('confirm-contact').textContent = contactInfo;
+          document.getElementById('confirm-location').textContent = siteLocation;
+          document.getElementById('confirm-details').textContent = projectDetails;
+
+          // Build pre-populated mailto link
+          const subject = encodeURIComponent(`Consultation Inquiry: ${serviceRequired} - ${fullName}`);
+          const bodyText =
+            `Hello AVAYA Engineering Consultancy,\n\n` +
+            `I would like to request a consultation with the following details:\n\n` +
+            `• Full Name: ${fullName}\n` +
+            `• Contact (Phone/Email): ${contactInfo}\n` +
+            `• Service Required: ${serviceRequired}\n` +
+            `• Site / Property Location: ${siteLocation}\n\n` +
+            `Project Details:\n${projectDetails}\n\n` +
+            `Best regards,\n${fullName}`;
+
+          mailtoLaunchBtn.setAttribute('href', `mailto:ava.eng.cons@gmail.com?subject=${subject}&body=${encodeURIComponent(bodyText)}`);
+
+          // Toggle to confirmation panel
+          formWrapper.classList.add('hidden');
+          confirmationWrapper.classList.remove('hidden');
+        });
+      }
+
+      if (resetFormBtn) {
+        resetFormBtn.addEventListener('click', () => {
+          confirmationWrapper.classList.add('hidden');
+          formWrapper.classList.remove('hidden');
+        });
+      }
+
+      // 6. Scroll Reveal Observer
+      const revealElements = document.querySelectorAll('.reveal');
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.1 });
+
+        revealElements.forEach(el => observer.observe(el));
+      } else {
+        revealElements.forEach(el => el.classList.add('visible'));
+      }
+    });
+  </script>
+</body>
+</html>
